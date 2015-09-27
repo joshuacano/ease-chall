@@ -1,6 +1,6 @@
-# chall
+# Ease Central Challenge
 
-FIXME
+This is a simple application built using Luminus (A Clojure micro webframework)
 
 ## Prerequisites
 
@@ -10,11 +10,15 @@ You will need [Leiningen][1] 2.0 or above installed.
 
 ## Running
 
-To start a web server for the application, run:
+To start the application, run:
 
     lein run
 
+This will start the webserver running the application on Port 3000. 
+The application is a simple view that consumes the hot and top json feeds from reddit and presents them to a logged in user.
+A user can then choose to "Like" any particular reddit url and can subsequently view their 'likes' in their my-likes page. 
+
 ## License
 
-Copyright © 2015 FIXME
+Copyright © 2015 Joshua Cano
 # ease-chall
