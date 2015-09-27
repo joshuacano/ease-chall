@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="row">
+	<div class="span12">
+		<table class="table table-bordered">
+			<th>
+				<tr>
+					<td>Star</td>
+					<td>Image</td>
+					<td>Title</td>
+					<td>Comments</td> 
+			</th>
+				</tr>
+				{% for row in rows %}
+				<tr>
+					<td>
+						<input type="checkbox" class="btn btn-primary like" name="starspot"
+						data-cus_cd="{{cus_cd}}" data-subreddit_id="{{row.subreddit_id}}" data-img="{{row.thumb}}" 
+						data-url="{{row.url}}" data-title="{{row.title}}" data-num_comments="{{row.num_comments}}">
+					</td>
+					<td><a href="{{row.url}}" class="thumbnail"><img src="{{row.thumb}}"/></a></td>
+					<td><a href="{{row.url}}">{{row.title}}</a></td>
+					<td>{{row.num_comments}}</td>
+				</tr>
+				{% endfor %}
+		</table>
+	</div>
+</div>
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="jumbotron">
+	<h1>Welcome to Reddit Top/Hot</h1>
+	<p>Time to login, if you please!</p>
+		<form class="form-inline" action="post-customer" method="GET">
+			<div class="form-group">
+				<label class="sr-only" for="username">Username</label>
+				<input type="text" class="form-control" name="username" placeholder="username">
+			</div>
+			<div class="form-group">
+				<label class="sr-only" for="password">Password</label>
+				<input type="password" class="form-control" name="password" placeholder="Password">
+			</div>
+			<button type="submit" class="btn btn-default">Sign in</button>
+		</form>
+</div>
+
+<div class="row">
+	<div class="span12">
+
+	</div>
+</div>
+{% endblock %}
