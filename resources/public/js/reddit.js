@@ -1,3 +1,4 @@
+//Method to insert likes to data store
 $(":checkbox").click(function () {
 	var title = $(this).data("title");
 	var img = $(this).data("img");
@@ -14,8 +15,6 @@ $(":checkbox").click(function () {
 		"subreddit_id" : subreddit_id
 	
 	};
-	console.debug(title + " " + img + " " + cus_cd + " " + url + " " + num_comments + " " + subreddit_id);
-	console.debug(formData);
 	$.ajax({
 		type: "POST",
 		url: "/post-likes",
@@ -23,10 +22,10 @@ $(":checkbox").click(function () {
 		contentType: 'application/json', 
 		dataType: "json",
 		success: function(data){
-			console.debug(cus_cd + " saved " + title);
+			console.debug(cus_cd + " saved " + subreddit_id);
 		},
 		failure: function(errMsg) {
-			//Log information in errorLog
+			//TODO: Log information in errorLog
 			alert(errMsg);
 		}
 	});

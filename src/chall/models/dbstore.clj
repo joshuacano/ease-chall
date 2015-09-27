@@ -12,14 +12,15 @@
                         password cus_cd]))
 
 (defn get-customer [cus_name password]
+  "Get customer record from database"
   (:cus_cd (first (j/query mysql-db ["SELECT cus_cd FROM customer WHERE name = ? and password = ?" cus_name password]))))
 
 (defn has-customer [cus_name password]
-  "Has Login"
+  "Is Customer present?"
   (not (nil? (get-customer cus_name password))))
 
 (defn insert-customer [cus_name password]
-  "Insert Customer"
+  "Insert Customer to db"
   (do
     (j/execute! mysql-db ["INSERT INTO customer (name, password) VALUES (?, ?)" cus_name password] )
     (get-customer cus_name password)))
@@ -32,11 +33,11 @@
                         cus_cd reddit_id url title num_comments img]))  
 
 (defn remove-likes [cus_cd reddit_id] 
-  "Remove Doc from store"
+  "Remove like from store"
   (j/execute! mysql-db [ "DELETE FROM customer_likes WHERE cus_cd = ? and reddit_id = ?"
                         cus_cd reddit_id]))
 
 (defn select-likes [cus_cd]
-  "Get Docs from store"
+  "Get like from store"
   (j/query mysql-db ["SELECT * FROM customer_likes WHERE cus_cd = ?" cus_cd]))
 
