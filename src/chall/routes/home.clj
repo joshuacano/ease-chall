@@ -1,3 +1,4 @@
+;Routing Namespace for challenge app
 (ns chall.routes.home
   (:require [chall.layout :as layout]
             [compojure.core :refer [defroutes GET POST]]

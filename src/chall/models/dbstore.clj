@@ -1,3 +1,4 @@
+;Namespace for DB store methods of challenge app
 (ns chall.models.dbstore
   (require [clojure.java.jdbc :as j]))
 

@@ -1,7 +1,7 @@
-(defproject chall "0.1.0-SNAPSHOT"
+(defproject chall "1.0.0"
 
-  :description "FIXME: write description"
-  :url "http://example.com/FIXME"
+  :description "Simple web app displaying hot/top json feeds from Reddit"
+  :url "http://localhost:3000"
 
   :dependencies [[org.clojure/clojure "1.7.0"]
                  [selmer "0.9.2"]

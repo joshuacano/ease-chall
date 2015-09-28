@@ -14,9 +14,13 @@
 				{% for row in rows %}
 				<tr>
 					<td>
+						{% ifequal page "my-likes.html" %}
+						<!-- Do not output checkbox for my likes page -->
+						{% else %}
 						<input type="checkbox" class="btn btn-primary like" name="starspot"
 						data-cus_cd="{{cus_cd}}" data-subreddit_id="{{row.subreddit_id}}" data-img="{{row.thumb}}" 
 						data-url="{{row.url}}" data-title="{{row.title}}" data-num_comments="{{row.num_comments}}">
+						{% endifequal %}
 					</td>
 					<td><a href="{{row.url}}" class="thumbnail"><img src="{{row.thumb}}"/></a></td>
 					<td><a href="{{row.url}}">{{row.title}}</a></td>
