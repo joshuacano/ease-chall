@@ -21,4 +21,3 @@ A user can then choose to "Like" any particular reddit url and can subsequently 
 ## License
 
 Copyright © 2015 Joshua Cano
-# ease-chall
