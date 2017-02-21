@@ -1,4 +1,4 @@
-# Ease Central Challenge
+# Ease Reddit App
 
 This is a simple application built using Luminus (A Clojure micro webframework)
 
